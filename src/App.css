@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Rubik+Bubbles&display=swap');
+
+@import "tailwindcss";
+
+
+.rubik-bubbles-regular {
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.baloo-da-2-regular {
+  font-family: "Baloo Da 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --purple: #AA60C8;
+  --pink:#D69ADE;
+  --pastel:#EABDE6;
+  --pinkwhite:#FFDFEF;
+}
+
+body #root{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.maincontainer {
+  text-align: center;
+}
+.heart {
+  display:flex;
+  margin: 10px auto;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.half {
+  position: absolute;
+  margin-inline: auto;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 10px 10px;
+}
+
+.left {
+  transform: rotate(315deg);
+  left: 18px;
+  top: 0;
+  animation:rotateLeft 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+.right {
+  transform: rotate(90deg);
+  left: 15px;
+  top: 15px;
+  animation:rotateRight 2s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes rotateRight {
+  0% {
+    height: 80px;
+
+  }
+  10% {
+    height: 80px;
+  }
+  25% {
+    border-radius: 50px 50px 20px 20px;
+    
+  }
+  50% {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: 5px;
+    top: 5px;
+  }
+
+  100% {
+
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    transform: rotate(315deg);
+    height: 80px;
+    border-radius: 50px 50px 10px 10px;
+  }
+  10% {
+    transform: rotate(315deg);
+    height: 80px;
+    border-radius: 50px 50px 10px 10px;
+  }
+  25% {
+    border-radius: 50px 50px 20px 20px;
+  }
+  50%{
+    transform: rotate(495deg);
+    height: 30px;
+    width: 30px;
+    top: 25px;
+    left: 50px;
+    border-radius: 50%;
+  }
+  100% {
+    transform: rotate(675deg);
+  }
+}
+.image{
+  width: 200px;
+}
+.bg-inh {
+  background-color: inherit;
+}
+.btn-20{
+  font-size:20px;
+}
